@@ -10,10 +10,10 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class SelenideRepositorySearch {
+public class SelenideRepositorySearchTest {
 
     @BeforeAll
-    static void SetupBeforeTest() {
+    static void setupBeforeTest() {
         Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://github.com/";
@@ -21,7 +21,7 @@ public class SelenideRepositorySearch {
     }
 
     @Test
-    void ShouldFindSoftAssertionsJUnitCode() {
+    void shouldFindSoftAssertionsJUnitCode() {
        open("/selenide/selenide");
        $("#wiki-tab").click();
        $("#wiki-body").shouldBe(visible).shouldHave(text("Soft assertions"));

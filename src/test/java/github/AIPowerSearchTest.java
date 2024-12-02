@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class AIPowerSearchTest {
 
     @BeforeAll
-    static void SetupBeforeTest() {
+    static void setupBeforeTest() {
         Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://github.com/";
@@ -20,7 +20,7 @@ public class AIPowerSearchTest {
     }
 
     @Test
-    void SearchAIPowerDeveloperPlatform (){
+    void searchAIPowerDeveloperPlatform(){
         open("baseUrl");
         $(byTagAndText("button","Solutions")).hover();
         $("a[href='https://github.com/enterprise']").click();
